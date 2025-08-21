@@ -18,9 +18,9 @@
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
         <!-- Spring相关版本 (已验证兼容组合) -->
-        <spring-boot.version>3.2.5</spring-boot.version>
-        <spring-cloud-alibaba.version>2023.0.1.0</spring-cloud-alibaba.version>
-        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-boot.version>3.5.3</spring-boot.version>
+        <spring-cloud-alibaba.version>2023.0.3.3</spring-cloud-alibaba.version>
+        <spring-cloud.version>2025.0.0</spring-cloud.version>
         <!-- 其他组件版本 (兼容JDK17和Spring Boot3) -->
         <lombok.version>1.18.38</lombok.version>
     </properties>
@@ -53,6 +53,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -63,7 +69,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot.version}</version>
+                    <version>3.5.4</version>
                     <configuration>
                         <excludes>
                             <exclude>
