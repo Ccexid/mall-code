@@ -1,4 +1,4 @@
-package com.ccexid.core.entity;
+package com.ccexid.core.domain;
 
 import java.io.Serial;
 import java.io.Serializable;

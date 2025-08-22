@@ -1,4 +1,4 @@
-package com.ccexid.core.entity;
+package com.ccexid.core.domain;
 
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
