@@ -1,8 +1,7 @@
 package com.ccexid.core.entity;
 
-import com.ccexid.core.model.BaseModel;
-
 import java.io.Serial;
+import java.io.Serializable;
 
 /**
  * 返回结果实体
@@ -16,8 +15,8 @@ public record ResultEntity<T>(
         int code,
         String message,
         T data
-) implements BaseModel {
+) implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-    
+
 }
