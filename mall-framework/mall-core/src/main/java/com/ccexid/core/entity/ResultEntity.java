@@ -19,4 +19,5 @@ public record ResultEntity<T>(
 ) implements BaseModel {
     @Serial
     private static final long serialVersionUID = 1L;
+    
 }
