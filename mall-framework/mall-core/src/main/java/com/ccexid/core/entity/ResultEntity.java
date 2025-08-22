@@ -19,4 +19,17 @@ public record ResultEntity<T>(
     @Serial
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 构建ResultEntity对象的通用方法
+     *
+     * @param <T> 返回数据的泛型类型
+     * @param code 状态码
+     * @param message 返回消息
+     * @param data 返回的数据内容
+     * @return 包含指定状态码、消息和数据的ResultEntity对象
+     */
+    public static <T> ResultEntity<T> builder(final int code, final String message, final T data) {
+        return new ResultEntity<>(code, message, data);
+    }
+
 }
