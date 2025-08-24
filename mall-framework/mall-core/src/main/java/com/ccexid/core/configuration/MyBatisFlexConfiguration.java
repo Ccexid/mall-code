@@ -4,8 +4,10 @@ import com.mybatisflex.core.FlexGlobalConfig;
 import com.mybatisflex.core.audit.AuditManager;
 import com.mybatisflex.spring.boot.MyBatisFlexCustomizer;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 
 @Slf4j
+@AutoConfiguration
 public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
         /**
      * 自定义Flex全局配置
