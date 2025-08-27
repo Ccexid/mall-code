@@ -1,4 +1,17 @@
-/mall-framework/.idea/
-/mall-dependencies/.idea/
+# IDE相关文件
 .idea/
+*.iml
+*.iws
+out/
+target/
+
+# 框架模块
+/mall-framework/.idea/
 /mall-framework/mall-core/target/
+/mall-framework/target/
+
+# 依赖模块
+/mall-dependencies/target/
+
+# 其他编译输出
+*/target/
