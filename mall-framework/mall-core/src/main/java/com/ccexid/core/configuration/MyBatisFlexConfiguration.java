@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
 @Slf4j
 @AutoConfiguration
 public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
-        /**
+    /**
      * 自定义Flex全局配置
      *
      * @param flexGlobalConfig Flex全局配置对象，用于配置Flex相关的全局参数
@@ -22,6 +22,8 @@ public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
         AuditManager.setMessageCollector(auditMessage -> {
             log.info("{},{}ms", auditMessage.getFullSql(), auditMessage.getElapsedTime());
         });
+
+        flexGlobalConfig.setPrintBanner(false);
     }
 
 }
