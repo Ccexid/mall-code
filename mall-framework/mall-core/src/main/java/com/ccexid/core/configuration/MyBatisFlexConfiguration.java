@@ -4,6 +4,8 @@ import com.mybatisflex.core.FlexGlobalConfig;
 import com.mybatisflex.core.audit.AuditManager;
 import com.mybatisflex.spring.boot.MyBatisFlexCustomizer;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.logging.stdout.StdOutImpl;
+import org.apache.ibatis.session.Configuration;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 
 @Slf4j
@@ -23,6 +25,8 @@ public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
             log.info("{},{}ms", auditMessage.getFullSql(), auditMessage.getElapsedTime());
         });
         configuration.setPrintBanner(false);
+        Configuration config = configuration.getConfiguration();
+        config.setLogImpl(StdOutImpl.class);
     }
 
 }
