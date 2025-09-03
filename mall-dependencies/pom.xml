@@ -122,6 +122,11 @@
                                 <artifactId>mica-auto</artifactId>
                                 <version>${mica-auto.version}</version>
                             </path>
+                            <path>
+                                <groupId>com.mybatis-flex</groupId>
+                                <artifactId>mybatis-flex-processor</artifactId>
+                                <version>${mybatis-flex.version}</version>
+                            </path>
                         </annotationProcessorPaths>
                     </configuration>
                 </plugin>

@@ -12,18 +12,17 @@ public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
     /**
      * 自定义Flex全局配置
      *
-     * @param flexGlobalConfig Flex全局配置对象，用于配置Flex相关的全局参数
+     * @param configuration Flex全局配置对象，用于配置Flex相关的全局参数
      */
     @Override
-    public void customize(FlexGlobalConfig flexGlobalConfig) {
+    public void customize(FlexGlobalConfig configuration) {
         log.info("MyBatisFlexConfiguration.customize");
         // 开启审计功能
         AuditManager.setAuditEnable(true);
         AuditManager.setMessageCollector(auditMessage -> {
             log.info("{},{}ms", auditMessage.getFullSql(), auditMessage.getElapsedTime());
         });
-
-        flexGlobalConfig.setPrintBanner(false);
+        configuration.setPrintBanner(false);
     }
 
 }

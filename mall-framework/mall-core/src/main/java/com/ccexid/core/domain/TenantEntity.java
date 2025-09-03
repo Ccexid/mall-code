@@ -1,7 +1,6 @@
 package com.ccexid.core.domain;
 
 import com.mybatisflex.annotation.Column;
-import com.mybatisflex.core.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

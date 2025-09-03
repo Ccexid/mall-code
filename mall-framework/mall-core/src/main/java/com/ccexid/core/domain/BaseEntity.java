@@ -12,7 +12,7 @@ import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
-@Data(staticConstructor = "create")
+@Data
 public class BaseEntity<T extends Model<T>> extends Model<T> implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
