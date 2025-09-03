@@ -17,9 +17,21 @@ public class BaseEntity<T extends Model<T>> extends Model<T> implements Serializ
     @Serial
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 创建时间
+     */
     @Column(onInsertValue = "now()")
-    private Date createTime;
+    private Date createdTime;
 
+    /**
+     * 修改时间
+     */
     @Column(onUpdateValue = "now()", onInsertValue = "now()")
-    private Date updateTime;
+    private Date updatedTime;
+
+    /**
+     * 是否删除
+     */
+    @Column
+    private Boolean deleted;
 }
