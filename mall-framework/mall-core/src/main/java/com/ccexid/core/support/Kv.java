@@ -1,5 +1,6 @@
 package com.ccexid.core.support;
 
+import com.ccexid.core.utils.Func;
 import org.springframework.util.LinkedCaseInsensitiveMap;
 
 import java.util.Map;
@@ -56,7 +57,7 @@ public class Kv<T> extends LinkedCaseInsensitiveMap<T> {
     @SuppressWarnings("unchecked")
     public T get(String attr, T defaultValue) {
         Object result = this.get(attr);
-        return (T) (result != null ? result : defaultValue);
+        return (T) (Func.isNotNone(result) ? result : defaultValue);
     }
 
 
@@ -83,12 +84,7 @@ public class Kv<T> extends LinkedCaseInsensitiveMap<T> {
     public Kv<T> clone() {
         // 创建新的Kv实例并复制所有键值对
         Kv<T> clone = new Kv<>();
-        try {
-            clone.putAll(this);
-        } catch (Exception e) {
-            // 如果克隆过程中出现异常，返回空的Kv实例而不是null
-            return new Kv<>();
-        }
+        clone.putAll(this);
         return clone;
     }
 
