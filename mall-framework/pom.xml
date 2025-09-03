@@ -18,6 +18,16 @@
         <pf4j.version>3.13.0</pf4j.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ccexid</groupId>
+                <artifactId>mall-core</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,6 +42,7 @@
 
     <modules>
         <module>mall-core</module>
+        <module>mall-user-center</module>
     </modules>
 
     <build>

@@ -24,7 +24,7 @@ public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
         AuditManager.setMessageCollector(auditMessage -> {
             log.info("{},{}ms", auditMessage.getFullSql(), auditMessage.getElapsedTime());
         });
-        configuration.setPrintBanner(false);
+        configuration.setPrintBanner(true);
         Configuration config = configuration.getConfiguration();
         config.setLogImpl(StdOutImpl.class);
     }

@@ -1,0 +1,8 @@
+server:
+  port: 48801
+spring:
+  application:
+    name: mall-user-center
+mybatis-flex:
+  configuration:
+    cache-enabled: on
