@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.logging.stdout.StdOutImpl;
 import org.apache.ibatis.session.Configuration;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.context.annotation.Bean;
 
 @Slf4j
 @AutoConfiguration
@@ -29,4 +30,11 @@ public class MyBatisFlexConfiguration implements MyBatisFlexCustomizer {
         config.setLogImpl(StdOutImpl.class);
     }
 
+    @Bean
+    public FlexGlobalConfig getFlexGlobalConfig() {
+        log.info("MyBatisFlexConfiguration.getFlexGlobalConfig");
+        FlexGlobalConfig globalConfig = FlexGlobalConfig.getDefaultConfig();
+        customize(globalConfig);
+        return globalConfig;
+    }
 }
