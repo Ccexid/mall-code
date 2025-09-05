@@ -20,21 +20,16 @@
   </el-tab-pane>
 </template>
 <script setup lang="ts">
+import type { TabPaneProps } from '@/components/TabPane/tabPane.ts'
+
 const {
   icon,
   label,
   keyValue,
   disabled = false,
   closable = false,
-  lazy = false,
-} = defineProps<{
-  icon?: string
-  label: string
-  keyValue: string | number
-  disabled?: boolean
-  closable?: boolean
-  lazy?: boolean
-}>()
+  lazy = false
+} = defineProps<TabPaneProps>()
 defineOptions({
   name: 'TabPane',
 })
