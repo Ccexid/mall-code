@@ -20,7 +20,7 @@ import java.util.Date;
 @Table(value = "sct_mall_user")
 @Data(staticConstructor = "create")
 @EqualsAndHashCode(callSuper = true)
-public class SctMallUser extends BaseEntity<SctMallUser> {
+public class SctMallUserDO extends BaseEntity<SctMallUserDO> {
     @Serial
     private final static long serialVersionUID = 1L;
 

@@ -1,9 +1,9 @@
 package com.ccexid.user.mapper;
 
 import com.ccexid.core.mybatis.mapper.BaseMapperX;
-import com.ccexid.user.model.SctMallUser;
+import com.ccexid.user.model.SctMallUserDO;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface SctMallUserMapper extends BaseMapperX<SctMallUser> {
+public interface SctMallUserMapper extends BaseMapperX<SctMallUserDO> {
 }
