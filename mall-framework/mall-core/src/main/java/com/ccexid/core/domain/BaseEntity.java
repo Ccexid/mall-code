@@ -32,6 +32,6 @@ public class BaseEntity<T extends Model<T>> extends Model<T> implements Serializ
     /**
      * 是否删除
      */
-    @Column
+    @Column(isLogicDelete = true)
     private Boolean deleted;
 }
