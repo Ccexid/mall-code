@@ -1,7 +1,10 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <template>
   <el-tabs v-model="activeTab">
     <tab-pane label="用户手册" :key-value="1" icon="StarFilled">
-      <tab-body :fieldList="exampleForm.base" :model="model" @submit="handleBaseSubmit">111</tab-body>
+      <tab-body :fieldList="exampleForm.base" :model="model" @submit="handleBaseSubmit"
+        >111</tab-body
+      >
     </tab-pane>
     <tab-pane label="实用联系人" :key-value="2" icon="StarFilled">2222</tab-pane>
     <tab-pane label="会议纪要" :key-value="3" icon="StarFilled">3333</tab-pane>
@@ -19,6 +22,7 @@ import TabBody from '@/components/TabBody/index.vue'
 
 const activeTab = ref(1)
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const model = ref<Record<string, any>>({
   name: '张三',
   gender: 1,
@@ -31,6 +35,7 @@ const model = ref<Record<string, any>>({
  * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
  *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const handleBaseSubmit = (model: Record<string, any>) => {
   console.log(model)
 }
@@ -77,7 +82,7 @@ const exampleForm: Record<string, Form.FieldItem[]> = {
     { label: '密码', field: 'password', type: 'password', placeholder: '这是一个密码输入框' },
     { label: '只读', field: 'readonly', readonly: true, placeholder: '这是一个只读输入框' },
     { label: '留言板', field: 'summary', type: 'textarea', placeholder: '留言板' },
-  ]
+  ],
 }
 </script>
 
