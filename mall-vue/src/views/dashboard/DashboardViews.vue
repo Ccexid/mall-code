@@ -11,10 +11,6 @@
 
 <script setup lang="ts">
 import { Edit } from '@element-plus/icons-vue'
-
-defineOptions({
-  name: "DashboardViews",
-})
 </script>
 <style scoped lang="less">
 
