@@ -1,8 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
