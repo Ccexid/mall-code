@@ -16,6 +16,8 @@ export const constantRoutes: RouteRecordRaw[] = [
         meta: {
           title: 'Dashboard',
           icon: 'HomeFilled',
+          hidden: true,
+          back: false,
         },
       },
     ],

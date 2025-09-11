@@ -6,7 +6,7 @@
     @click-right="handleClickRight"
     :safe-area-inset-top="true"
   >
-    <template #left>
+    <template v-if="left" #left>
       <van-icon name="arrow-left" />
     </template>
     <template #right>

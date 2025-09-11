@@ -4,8 +4,7 @@ declare module 'vue-router' {
   interface RouteMeta {
     title: string
     icon?: string
-    hidden?: boolean
-    activeMenu?: string
-    roles?: string[]
+    hidden?: booleans
+    back?: boolean
   }
 }
