@@ -9,6 +9,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -41,6 +42,7 @@ export default defineConfig({
         // Auto register Element Plus components
         // 自动导入 Element Plus 组件
         ElementPlusResolver(),
+        VantResolver(),
       ],
       dts: fileURLToPath(new URL('./src/components.d.ts', import.meta.url)),
     }),
